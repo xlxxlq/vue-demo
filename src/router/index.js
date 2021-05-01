@@ -10,33 +10,30 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Login',
       component: Login,
-      redirect: '/login',
-      children: [
-        {
-            path: 'login',
-            name: 'Login',
-            component: Login
-        },
-      ]
+      // redirect: '/login',
+      // children: [
+      //   {
+      //     path: 'login',
+      //     name: 'Login',
+      //     component: Login
+      //   },
+      // ]
     },
     {
-        path: '/index',
-        name: 'Index',
-        component: Index
+      path: '/index',
+      name: 'Index',
+      component: Index
     },
     {
-        path: '/error',
-        name: 'Error',
-        component: Error
+      path: '/error',
+      name: 'Error',
+      component: Error
     },
-    // {
-    //     path: '/404',
-    //     component: () => import('@/pages/404'),
-    // },
     {
-        path:'*',
-        component:() => import('@/pages/404'),
+      path: '*',
+      component: () => import('@/pages/404'),
     },
   ]
 })
